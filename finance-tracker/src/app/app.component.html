@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span>Personal Finance Tracker</span>
+</mat-toolbar>
+<div class="container">
+  <app-summary></app-summary>
+  <app-transaction-form (transactionAdded)="refreshData()"></app-transaction-form>
+  <app-transactions></app-transactions>
+</div>

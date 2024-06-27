@@ -1,0 +1,9 @@
+<ul class="transactions">
+  <li *ngFor="let transaction of transactions">
+    <span class="transaction-description">{{ transaction.description }}</span>
+    <span class="transaction-amount">{{ transaction.amount | currency }}</span>
+    <span class="transaction-date">{{ transaction.date | date }}</span>
+    <span class="transaction-type" [ngClass]="transaction.type">{{ transaction.type }}</span>
+    <button (click)="deleteTransaction(transaction)">Delete</button>
+  </li>
+</ul>
